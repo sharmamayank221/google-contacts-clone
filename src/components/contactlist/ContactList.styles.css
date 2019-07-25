@@ -1,21 +1,3 @@
-th {
-  display: table-cell;
-  vertical-align: inherit;
-  color: #5f6368;
-  text-align: center;
-}
-
-.table-head {
-  position: relative;
-  right: 200px;
-}
-
-p {
-  font-size: 11px;
-  color: #7e8286;
-  font-weight: bold;
-}
-
 .horizontal-line {
   border-bottom: 2px solid #f7f7f7;
   position: relative;
@@ -24,7 +6,15 @@ p {
   left: 400px;
 }
 
-.table-dimension {
-  position: absolute;
-  right: 400px;
+.contact-list {
+  position: relative;
+  left: 350px;
+  top: 50px;
+}
+
+.contacts-count {
+  position: relative;
+  top: 55px;
+  left: 400px;
+  margin: 7px 0;
 }

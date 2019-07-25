@@ -1,24 +1,15 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar.component";
+import Contact from "../Contact/Contact.component";
 import "./ContactList.styles.css";
 const ContactList = props => {
   return (
     <>
       <div className="horizontal-line" />
-      <div className="table-dimension">
-        <table className="table table-hover table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">{`Contacts(${props.totalContacts.length})`}</th>
-              <th scope="col">Name</th>
-              <th scope="col">Phone number</th>
-              <th scope="col">Email</th>
-            </tr>
-          </thead>
-          <tr />
-
-          <tbody>{props.tableData}</tbody>
-        </table>
+      <h6 className="contacts-count">Contacts({props.totalContacts.length})</h6>
+      <div className="contact-list">
+        {props.searchContacts.map(contact => {
+          return <Contact key={contact.id} contact={contact} />;
+        })}
       </div>
     </>
   );

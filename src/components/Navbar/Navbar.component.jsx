@@ -20,7 +20,7 @@ const Navbar = props => {
         />
         <li>Contacts</li>
         <li>
-          <SearchBox />
+          <SearchBox handleChanged={props.handleChange} />
         </li>
       </ul>
     </nav>

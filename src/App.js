@@ -9,7 +9,8 @@ class App extends React.Component {
     super();
     this.state = {
       contacts: [],
-      showSideBar: false
+      showSideBar: false,
+      searchField: ""
     };
   }
 
@@ -19,38 +20,35 @@ class App extends React.Component {
       .then(users => this.setState({ contacts: users }));
   }
 
-  renderTableData() {
-    return this.state.contacts.map((user, index) => {
-      const { id, name, phone, email } = user;
-      return (
-        <tr key={id}>
-          <td>{id}</td>
-          <td>{name}</td>
-          <td>{phone}</td>
-          <td>{email}</td>
-        </tr>
-      );
-    });
-  }
-
   toggleSideBar = () => {
     this.setState(prevState => {
       return { showSideBar: !prevState.showSideBar };
     });
   };
 
+  handleChange = event => {
+    return this.setState({
+      searchField: event.target.value
+    });
+  };
+
   render() {
-    const filteredContacts = this.state.contacts.filter(u => {
+    const { contacts, showSideBar, searchField } = this.state;
+    const totalContacts = contacts.filter(u => {
       return u.name;
+    });
+    const filterSearchContacts = contacts.filter(contact => {
+      return contact.name.toLowerCase().includes(searchField.toLowerCase());
     });
 
     return (
       <div style={{ height: "100%" }}>
-        <SideBar show={this.state.showSideBar} />
-        <Navbar click={this.toggleSideBar} />
+        <SideBar show={showSideBar} />
+        <Navbar click={this.toggleSideBar} handleChange={this.handleChange} />
         <ContactList
-          tableData={this.renderTableData()}
-          totalContacts={filteredContacts}
+          contacts={contacts}
+          totalContacts={totalContacts}
+          searchContacts={filterSearchContacts}
         />
       </div>
     );
