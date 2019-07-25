@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  width: 1000px;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 24px;
+  color: #808386;
+}
+
+.logo {
+  margin-right: 10px;
+}
