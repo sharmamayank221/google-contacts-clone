@@ -4,7 +4,6 @@ import "./ContactList.styles.css";
 const ContactList = props => {
   return (
     <>
-      <div className="horizontal-line" />
       <h6 className="contacts-count">Contacts({props.totalContacts.length})</h6>
       <div className="contact-list">
         {props.searchContacts.map(contact => {

@@ -11,11 +11,27 @@ const SideBar = props => {
       <nav className={barClasses}>
         <ul>
           <li>
-            <button>Create Contact</button>
+            <button className="create-contact">
+              <span className="fas fa-plus fa-2x" />
+              Create Contact
+            </button>
           </li>
-          <li>Contacts</li>
-          <li>Duplicates</li>
-          <li>Settings</li>
+
+          <hr className="horizontal-line-sidebar" />
+          <div className="center-part">
+            <li>
+              <i className="far fa-user" />
+              Contacts
+            </li>
+            <li>
+              <i className="far fa-clone" />
+              Duplicates
+            </li>
+            <li>
+              <i className="fas fa-cog" />
+              Settings
+            </li>
+          </div>
         </ul>
       </nav>
     </>

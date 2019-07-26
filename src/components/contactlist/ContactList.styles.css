@@ -1,20 +1,16 @@
-.horizontal-line {
-  border-bottom: 2px solid #f7f7f7;
-  position: relative;
-  top: 48px;
-  width: 51%;
-  left: 400px;
-}
-
 .contact-list {
+  display: block;
   position: relative;
   left: 350px;
-  top: 50px;
+  top: 135px;
+  width: 1100px;
 }
 
 .contacts-count {
   position: relative;
-  top: 55px;
+  top: 150px;
   left: 400px;
   margin: 7px 0;
+  color: #5f6368;
+  width: 1100px;
 }

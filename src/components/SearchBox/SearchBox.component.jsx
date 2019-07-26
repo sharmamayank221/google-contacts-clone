@@ -4,7 +4,7 @@ const SearchBox = props => {
   return (
     <div className="main">
       <div className="form-group has-search">
-        <span className="fa fa-search fa-xs form-control-feedback" />
+        <span className="fa fa-search fa-lg form-control-feedback" />
         <input
           type="text"
           className="form-control"
