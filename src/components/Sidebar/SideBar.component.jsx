@@ -1,7 +1,6 @@
 import React from "react";
 import "./SideBar.styles.css";
-import CreateContactButton from "../CreateContactButton/CreateContactButton.component";
-
+import NewContactPopup from "../../Forms/ContactPopup/NewContactPopup.component";
 export const SideBar = props => {
   let barClasses = "side-bar";
   if (props.show) {
@@ -12,7 +11,7 @@ export const SideBar = props => {
       <nav className={barClasses}>
         <ul>
           <span>
-            <CreateContactButton />
+            {props.children}
           </span>
 
           <hr className="horizontal-line-sidebar" />
