@@ -1,7 +1,8 @@
 import React from "react";
 import "./SideBar.styles.css";
+import CreateContactButton from "../CreateContactButton/CreateContactButton.component";
 
-const SideBar = props => {
+export const SideBar = props => {
   let barClasses = "side-bar";
   if (props.show) {
     barClasses = "side-bar open";
@@ -10,24 +11,21 @@ const SideBar = props => {
     <>
       <nav className={barClasses}>
         <ul>
-          <li>
-            <button className="create-contact">
-              <span className="fas fa-plus fa-2x" />
-              Create Contact
-            </button>
-          </li>
+          <span>
+            <CreateContactButton />
+          </span>
 
           <hr className="horizontal-line-sidebar" />
           <div className="center-part">
-            <li>
+            <li className="sidebar-li-hover">
               <i className="far fa-user" />
               Contacts
             </li>
-            <li>
+            <li className="sidebar-li-hover">
               <i className="far fa-clone" />
               Duplicates
             </li>
-            <li>
+            <li className="sidebar-li-hover">
               <i className="fas fa-cog" />
               Settings
             </li>
@@ -37,5 +35,3 @@ const SideBar = props => {
     </>
   );
 };
-
-export default SideBar;

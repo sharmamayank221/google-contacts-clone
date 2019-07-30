@@ -1,0 +1,19 @@
+.create-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: gray;
+  box-shadow: black;
+  border-radius: 24px;
+  padding: 0 20px;
+  background: white;
+  box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+  color: #3c4043;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  letter-spacing: 0.0892857143em;
+}

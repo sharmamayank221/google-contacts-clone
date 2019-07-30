@@ -4,6 +4,9 @@
   align-items: center;
   margin: 20px 0;
 }
+.wrapper:hover {
+  background: #f1f3f4;
+}
 
 .contact-name {
   display: flex;

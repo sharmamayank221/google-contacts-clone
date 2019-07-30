@@ -2,7 +2,7 @@ import React from "react";
 import ContactList from "./components/contactlist/ContactList.component";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.component";
-import SideBar from "./components/Sidebar/SideBar.component";
+import { SideBar } from "./components/Sidebar/SideBar.component";
 
 class App extends React.Component {
   constructor() {

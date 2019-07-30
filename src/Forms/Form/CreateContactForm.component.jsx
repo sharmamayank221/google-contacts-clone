@@ -7,7 +7,7 @@ import { FaAddressCard } from "react-icons/fa";
 import { IoIosBriefcase, IoIosMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
 
-import "./styles.css";
+import "./CreateContactForm.styles.css";
 
 const ContactForm = ({ values, handleChange, handleSubmit }) => {
   return (
@@ -73,7 +73,7 @@ const FormikApp = withFormik({
   handleSubmit(values) {
     console.log(values);
   }
-})(App);
+})(ContactForm);
 
 render(<FormikApp />, document.getElementById("root"));
 
