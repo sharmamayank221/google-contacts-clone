@@ -1,0 +1,37 @@
+.modal-root {
+  position: relative;
+  z-index: 999;
+}
+
+.popup-modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-close {
+  position: fixed;
+  top: 20%;
+  right: 15%;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.modal-close:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.bg-white {
+  background-color: #fff !important;
+  border: 1px solid black;
+  border-radius: 8px;
+}

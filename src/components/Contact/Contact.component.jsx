@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FiEdit2 } from "react-icons/fi";
 import "./Contact.styles.css";
 
 const Contact = props => {
@@ -8,12 +8,19 @@ const Contact = props => {
     <div className="wrapper">
       <div className="contact-name">
         <img src={image} alt="profile-img" className="pro-pic" />
-        <h6>{name}</h6>
+        <span>{name}</span>
       </div>
-      <div className="phone">
-        <h6>{phone}</h6>
+      <div className="fone">
+        <h6 className="h6-fone">{phone}</h6>
       </div>
-      <h6>{email}</h6>
+      <div className="mail">
+        <h6>{email}</h6>
+      </div>
+      <div className="edit">
+        <span className="edit-icon">
+          <FiEdit2 onClick={props.toggleModal} />
+        </span>
+      </div>
     </div>
   );
 };

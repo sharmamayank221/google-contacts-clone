@@ -28,7 +28,16 @@ li {
   cursor: pointer;
 }
 
-.sidebar-li-hover:hover {
+.sidebar-contacts {
+  width: 300px;
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-contacts:hover {
   background: #f1f3f4;
 }
 

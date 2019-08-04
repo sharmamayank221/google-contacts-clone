@@ -1,6 +1,5 @@
 import React from "react";
 import "./SideBar.styles.css";
-import NewContactPopup from "../../Forms/ContactPopup/NewContactPopup.component";
 export const SideBar = props => {
   let barClasses = "side-bar";
   if (props.show) {
@@ -10,24 +9,14 @@ export const SideBar = props => {
     <>
       <nav className={barClasses}>
         <ul>
-          <span>
-            {props.children}
-          </span>
+          <span>{props.children}</span>
 
           <hr className="horizontal-line-sidebar" />
           <div className="center-part">
-            <li className="sidebar-li-hover">
+            <div className="sidebar-contacts">
               <i className="far fa-user" />
-              Contacts
-            </li>
-            <li className="sidebar-li-hover">
-              <i className="far fa-clone" />
-              Duplicates
-            </li>
-            <li className="sidebar-li-hover">
-              <i className="fas fa-cog" />
-              Settings
-            </li>
+              Contacts({props.totalcontacts.length})
+            </div>
           </div>
         </ul>
       </nav>

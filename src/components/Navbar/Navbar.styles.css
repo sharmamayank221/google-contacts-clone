@@ -37,9 +37,9 @@ li {
 }
 
 .header {
-  position: relative;
+  position: fixed;
   left: 350px;
-  top: 0;
+  top: 122px;
   width: 1519px;
 }
 
@@ -47,11 +47,11 @@ li {
   display: flex;
   align-items: flex-start;
   align-content: space-around;
-  width: 700px;
+  width: 1161px;
 }
 
 .header-li {
-  margin-right: 170px;
+  margin-right: 266px;
 }
 
 .horizontal-line {

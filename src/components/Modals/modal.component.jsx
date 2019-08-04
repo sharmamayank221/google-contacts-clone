@@ -1,7 +1,7 @@
-import ContactForm from "../../Forms/Form/CreateContactForm.component";
 
 import React from "react";
 import ReactDOM from "react-dom";
+import './modal-styles.css';
 
 const modalRoot = document.getElementById("modal-root");
 
@@ -22,3 +22,5 @@ class Modal extends React.Component {
     return ReactDOM.createPortal(this.props.children, this.el);
   }
 }
+
+export default Modal;
