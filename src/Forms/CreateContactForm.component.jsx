@@ -1,59 +1,127 @@
 import React from "react";
-
+import FormInput from "../components/FormInput/FormInput.component";
 import { FaAddressCard } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
 import { TiUserAdd } from "react-icons/ti";
 import "./CreateContactForm.styles.css";
 
-const ContactForm = () => {
-  return (
-    <form className="form">
-      <div className="header-form">
-        <div className="header-title">Create new contact</div>
-      </div>
-      <div className="names">
-        <FaAddressCard style={{ width: 40, height: 25 }} />
-        <div className="name">
-          <input type="text" name="firstname" className="input" />
-          <label>Fisrt name</label>
+class ContactForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      firstname: "",
+      lastname: "",
+      mobile: "",
+      phone: "",
+      email: "",
+      group: ""
+    };
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    this.setState({
+      email: "",
+      mobile: "",
+      phone: "",
+      group: "",
+      firstname: "",
+      lastname: ""
+    });
+  };
+
+  handleChange = event => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  render() {
+    return (
+      <form className="form" onSubmit={this.handleSubmit}>
+        <div className="header-form">
+          <div className="header-title">Create new contact</div>
         </div>
-        <div className="last-name">
-          <input type="text" name="lastname" className="input" />
-          <label>Last name</label>
+        <div className="names">
+          <FaAddressCard style={{ width: 40, height: 25 }} />
+          <div className="name">
+            <FormInput
+              type="text"
+              name="firstname"
+              className="input"
+              value={this.state.firstname}
+              handleChange={this.handleChange}
+              label="First name"
+            />
+          </div>
+          <div className="last-name">
+            <FormInput
+              type="text"
+              name="lastname"
+              className="input"
+              handleChange={this.handleChange}
+              value={this.state.lastname}
+              label="Last name"
+            />
+          </div>
         </div>
-      </div>
-      <div className="comp-job">
-        <MdCall style={{ width: 40, height: 30 }} />
-        <div className="company">
-          <input type="number" name="mobile" className="input" />
-          <label> Mobile </label>
+        <div className="comp-job">
+          <MdCall style={{ width: 40, height: 30 }} />
+          <div className="company">
+            <FormInput
+              type="number"
+              name="mobile"
+              className="input"
+              handleChange={this.handleChange}
+              value={this.state.mobile}
+              label="Mobile"
+            />
+          </div>
+          <div className="title">
+            <FormInput
+              type="number"
+              name="phone"
+              className="input"
+              handleChange={this.handleChange}
+              value={this.state.phone}
+              label="Phone "
+            />
+          </div>
         </div>
-        <div className="title">
-          <input type="number" name="phone" className="input" />
-          <label>Home</label>
+        <div className="email">
+          <IoIosMail style={{ width: 40, height: 30 }} />
+          <div>
+            <FormInput
+              type="email"
+              name="email"
+              className="email-input"
+              handleChange={this.handleChange}
+              value={this.state.email}
+              label="Email"
+            />
+          </div>
         </div>
-      </div>
-      <div className="email">
-        <IoIosMail style={{ width: 40, height: 30 }} />
-        <div>
-          <input type="email" name="email" className="email-input" />
-          <label>Email </label>
+        <div className="phone">
+          <TiUserAdd style={{ width: 40, height: 30 }} />
+          <div className="input-label">
+            <FormInput
+              type="text"
+              name="group"
+              className="phone-input"
+              handleChange={this.handleChange}
+              value={this.state.group}
+              label="Group"
+            />
+          </div>
         </div>
-      </div>
-      <div className="phone">
-        <TiUserAdd style={{ width: 40, height: 30 }} />
-        <div className="input-label">
-          <input type="text" name="phone" className="phone-input" />
-          <label> Group</label>
-        </div>
-      </div>
-      <div className="bottom" />
-      <button type="submit" className="save-button">
-        save
-      </button>
-    </form>
-  );
-};
+        <div className="bottom" />
+        <button type="submit" className="save-button">
+          save
+        </button>
+      </form>
+    );
+  }
+}
 
 export default ContactForm;

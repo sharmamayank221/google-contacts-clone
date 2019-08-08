@@ -41,7 +41,7 @@ label {
 
 .input:focus {
   outline: none;
-  border-bottom: 2px solid #4285f4;
+  border-bottom: 2px solid #1a73e8;
 }
 
 input:focus + label {
@@ -108,12 +108,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .email-input:focus {
   outline: none;
-  border-bottom: 1px solid #00aced;
+  border-bottom: 2px solid #1a73e8;
 }
 
 .phone-input:focus {
   outline: none;
-  border-bottom: 1px solid #00aced;
+  border-bottom: 2px solid #1a73e8;
 }
 
 .header-form {
@@ -165,4 +165,8 @@ input[type="number"]::-webkit-outer-spin-button {
   background: none;
   color: #1a73e8;
   text-transform: capitalize;
+}
+
+.save-button:focus {
+  outline: none;
 }
