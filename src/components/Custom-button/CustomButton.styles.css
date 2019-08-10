@@ -1,0 +1,18 @@
+.save-button {
+  position: relative;
+  left: 500px;
+  top: 10px;
+  border: none;
+  font-size: 14px;
+  padding: 0 8px;
+  width: 64px;
+  height: 36px;
+  cursor: pointer;
+  background: none;
+  color: #1a73e8;
+  text-transform: capitalize;
+}
+
+.save-button:focus {
+  outline: none;
+}

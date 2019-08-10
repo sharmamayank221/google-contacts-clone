@@ -128,7 +128,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   line-height: 1.5rem;
   vertical-align: middle;
-  padding: 16px 0;
+  padding: 4px 0;
 }
 
 .email,
@@ -150,23 +150,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 57px;
   border-top: 1px solid #ddd;
   position: absolute;
-}
-
-.save-button {
-  position: relative;
-  left: 600px;
-  top: 10px;
-  border: none;
-  font-size: 14px;
-  padding: 0 8px;
-  width: 64px;
-  height: 36px;
-  cursor: pointer;
-  background: none;
-  color: #1a73e8;
-  text-transform: capitalize;
-}
-
-.save-button:focus {
-  outline: none;
+  display: flex;
+  align-items: center;
 }

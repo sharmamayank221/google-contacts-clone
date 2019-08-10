@@ -5,10 +5,11 @@ import { IoIosMail } from "react-icons/io";
 import { MdCall } from "react-icons/md";
 import { TiUserAdd } from "react-icons/ti";
 import "./CreateContactForm.styles.css";
+import CustomButton from "../components/Custom-button/CustomButton.component";
 
 class ContactForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       firstname: "",
       lastname: "",
@@ -44,7 +45,14 @@ class ContactForm extends React.Component {
           <div className="header-title">Create new contact</div>
         </div>
         <div className="names">
-          <FaAddressCard style={{ width: 40, height: 25 }} />
+          <FaAddressCard
+            style={{
+              width: 40,
+              height: 25,
+              color: "grey",
+              background: "transparent"
+            }}
+          />
           <div className="name">
             <FormInput
               type="text"
@@ -67,7 +75,7 @@ class ContactForm extends React.Component {
           </div>
         </div>
         <div className="comp-job">
-          <MdCall style={{ width: 40, height: 30 }} />
+          <MdCall style={{ width: 40, height: 30, color: "grey" }} />
           <div className="company">
             <FormInput
               type="number"
@@ -90,7 +98,14 @@ class ContactForm extends React.Component {
           </div>
         </div>
         <div className="email">
-          <IoIosMail style={{ width: 40, height: 30 }} />
+          <IoIosMail
+            style={{
+              width: 40,
+              height: 30,
+              color: "grey",
+              background: "transparent"
+            }}
+          />
           <div>
             <FormInput
               type="email"
@@ -103,7 +118,14 @@ class ContactForm extends React.Component {
           </div>
         </div>
         <div className="phone">
-          <TiUserAdd style={{ width: 40, height: 30 }} />
+          <TiUserAdd
+            style={{
+              width: 40,
+              height: 30,
+              color: "grey",
+              background: "transparent"
+            }}
+          />
           <div className="input-label">
             <FormInput
               type="text"
@@ -115,10 +137,15 @@ class ContactForm extends React.Component {
             />
           </div>
         </div>
-        <div className="bottom" />
-        <button type="submit" className="save-button">
-          save
-        </button>
+        <div className="bottom">
+          <CustomButton
+            style={{ marginRight: "25px" }}
+            onClick={this.props.cancle}
+          >
+            cancel
+          </CustomButton>
+          <CustomButton type="submit">save</CustomButton>
+        </div>
       </form>
     );
   }

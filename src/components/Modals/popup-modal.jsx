@@ -9,7 +9,7 @@ const Popup = ({ toggleModal }) => {
         &times;
       </div>
       <div className="bg-white w-40 h-50">
-        <Form />
+        <Form cancle={toggleModal} />
       </div>
     </div>
   );
